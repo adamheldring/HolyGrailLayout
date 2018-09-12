@@ -1,0 +1,107 @@
+/* ADAM CSS FOR TECHNIGO FLEXBOX ASSIGMENT */
+
+/* My fade-in animation for the name tags*/
+@keyframes fadein {
+    0%   {opacity: 0.0;}
+    10%  {opacity: 0.0;}
+    20%  {opacity: 0.0;}
+    25%  {opacity: 0.1;}
+    28%  {opacity: 0.15;}
+    30%  {opacity: 0.2;}
+    34%  {opacity: 0.25;}
+    38%  {opacity: 0.3}
+    40%  {opacity: 0.35;}
+    45%  {opacity: 0.4;}
+    50%  {opacity: 0.5;}
+    60%  {opacity: 0.6;}
+    70%  {opacity: 0.7;}
+    80%  {opacity: 0.8;}
+    90%  {opacity: 0.9;}
+    100% {opacity: 1.0;}
+}
+
+/* My background animation for different colors when loading */
+@keyframes colorswitch {
+    0%    {background-color: #0025FF;}
+    25%   {background-color: #FE3525;}
+    66%   {background-color: #FFAEC1;}
+    100%  {background-color: #F7941F;}
+}
+
+/* Sets border box and "handwriting-like" Google font for entire document */
+* {
+  box-sizing: border-box;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+html {
+  background:  #F7941F;
+  color: #fff;
+  animation-name: colorswitch;
+  animation-duration: 5s;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+
+.logo {
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.logo img {
+  width: 140px;
+  margin-top: 55px;
+}
+
+.main-card-container {
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+
+  /* Flex section */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+
+}
+
+.student-card {
+  display: inline-block;
+  background-color: #F1F1F1;
+  margin: 20px;
+  padding: 20px 30px 20px 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 4px 8px rgba(0, 0, 0, 0.3);
+}
+ /* Empty cards for last line left-alignment, zero height if not needed.  */
+.empty-card {
+  width: 400px;
+  height: auto;
+}
+.cardname {
+  color: black;
+  margin: 0px;
+  animation-name: fadein;
+  animation-duration: 4s;
+
+}
+.student-card img{
+  width: 300px;
+  height: 400px;
+}
