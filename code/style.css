@@ -1,6 +1,5 @@
-/* ADAM CSS FOR TECHNIGO FLEXBOX ASSIGMENT */
+/* ADAM CSS FOR TECHNIGO FLEXBOX ASSIGNMENT */
 
-/* My fade-in animation for the name tags*/
 @keyframes fadein {
     0%   {opacity: 0.0;}
     10%  {opacity: 0.0;}
@@ -19,8 +18,6 @@
     90%  {opacity: 0.9;}
     100% {opacity: 1.0;}
 }
-
-/* My background animation for different colors when loading */
 @keyframes colorswitch {
     0%    {background-color: #0025FF;}
     25%   {background-color: #FE3525;}
@@ -28,12 +25,10 @@
     100%  {background-color: #F7941F;}
 }
 
-/* Sets border box and "handwriting-like" Google font for entire document */
 * {
   box-sizing: border-box;
   font-family: 'Gloria Hallelujah', cursive;
 }
-
 html {
   background:  #F7941F;
   color: #fff;
@@ -41,9 +36,39 @@ html {
   animation-duration: 5s;
 }
 
-header {
+.outer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.inner {
+  box-sizing: border-box;
+  display: block;
+  margin: 0px;
+}
+
+.header {
   padding: 20px;
   text-align: center;
+  width: 100%;
+}
+.navigation {
+  width: 100%;
+}
+.left, .right {
+  width: 13%;
+}
+.center {
+  width: 74%;
+  display: flex;
+  padding-left: auto;
+  padding-right: auto;
+  justify-content: center;
+}
+.footer {
+  background: rgba(0,0,0,0.2);
+  margin-top: 10px;
+  width: 100%;
+  height: 400px;
 }
 
 h1 {
@@ -66,17 +91,9 @@ h1 {
 }
 
 .main-card-container {
-  padding: 0 5px;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-
-  /* Flex section */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-end;
-
 }
 
 .student-card {
@@ -89,11 +106,6 @@ h1 {
   font-weight: bold;
   box-shadow: 4px 8px rgba(0, 0, 0, 0.3);
 }
- /* Empty cards for last line left-alignment, zero height if not needed.  */
-.empty-card {
-  width: 400px;
-  height: auto;
-}
 .cardname {
   color: black;
   margin: 0px;
@@ -104,4 +116,37 @@ h1 {
 .student-card img{
   width: 300px;
   height: 400px;
+}
+.empty {
+  width: 400px;
+}
+.layout-item {
+  color: rgba(255, 255,255, 0.3);
+  background: rgba(0,0,0,0.1);
+  margin-top: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+@media (max-width: 1198px) {
+  .inner {
+    width: 100%;
+  }
+  .navigation {
+      order: 3;
+  }
+  .left, .right {
+    width: 49.5%;
+  }
+  .left {
+    order: 4;
+    margin-right: 0.5%;
+  }
+  .right {
+    order: 5;
+    margin-left: 0.5%;
+  }
+  .footer {
+    order: 6;
+  }
 }
