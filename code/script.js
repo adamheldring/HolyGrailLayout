@@ -4,7 +4,6 @@ window.onload = function() {
   var centerbox = document.getElementById('center');
   var leftbox = document.getElementById('left');
   var rightbox = document.getElementById('right');
-  var cardbox = document.getElementById('cardbox')
   var yearbookWidth = window.innerWidth;
   var spaceLeft;
 
